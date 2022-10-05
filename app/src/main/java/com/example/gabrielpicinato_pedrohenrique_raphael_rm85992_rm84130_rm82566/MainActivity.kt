@@ -63,13 +63,21 @@ class MainActivity : AppCompatActivity(), IcrudItem {
             result.data?.let {data ->
                 if (data.hasExtra(ITEM_RESULT)){
                     val item = data.getParcelableExtra<ItemListaModel>(ITEM_RESULT)
+                    if (item != null){
+                        val index = data.getIntExtra(INDEX_RESULT, -1)
+                        if (index >= 0){
+                            lAdapter.editLista(item, index)
+                        } else {
+                            lAdapter.addLista(item)
+                        }
+                    }
                 }
             }
         }
     }
 
     override fun RemoveItem (item: ItemListaModel, position: Int){
-
+        //
     }
 
 }
