@@ -41,6 +41,11 @@ class ItemLinhaAdapter(val itemListener: IcrudItem) :
         notifyItemInserted(lista.size)
     }
 
+    fun editLista(editItem: ItemListaModel, position: Int){
+        lista[position] = editItem
+        notifyItemChanged(position)
+    }
+
 
     class ItemLinhaHolder(val itemListaView: ItemListaBinding) :
         RecyclerView.ViewHolder(itemListaView.root) {
