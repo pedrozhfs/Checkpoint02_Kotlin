@@ -1,0 +1,16 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "GABRIELPICINATO_PEDROHENRIQUE_RAPHAEL_RM85992_RM84130_RM82566"
+include ':app'
