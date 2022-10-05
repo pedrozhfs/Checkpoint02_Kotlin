@@ -22,7 +22,7 @@ class DetalheItemActivity : AppCompatActivity() {
         item = intent.getParcelableExtra(ITEM_INTENT)
         index = intent.getIntExtra(INDEX_INTENT, -1)
         if(item != null){
-            dataBind.lblTamanho.setText(item?.item)
+            dataBind.lblTamanho.setText(item?.tamanho)
             dataBind.lblCor.setText(item?.cor)
             dataBind.lblNome.setText(item?.nome)
         }
